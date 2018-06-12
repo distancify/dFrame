@@ -1,0 +1,303 @@
+#_dFrame-header {
+	width: 100%;
+	z-index: 5;
+}
+
+#_dFrame-headerContent {
+	position: relative;
+	overflow: hidden;
+}
+
+#_dFrame-navigation, #_dFrame-hamburger {
+	float: left;
+}
+
+#_dFrame-navigation ul, #_dFrame-actions ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#_dFrame-navigation li {
+	display: inline-block;
+}
+
+#_dFrame-navigation ._dFrame-navPage {
+	display: none;
+}
+
+#_dFrame-actions li {
+	display: block;
+	float: right;
+	overflow: hidden;
+}
+
+#_dFrame-actions {
+	position: absolute;
+	top: 0;
+}
+
+#_dFrame-actions {
+	right: 0;
+	top: 0;
+	position: absolute;
+	transition: clip .2s;
+}
+
+._dFrameState-hamburger #_dFrame-navigation {
+	display: none;
+}
+#_dFrame-hamburger {
+	display: none;
+}
+._dFrameState-hamburger #_dFrame-hamburger {
+	display: block;
+}
+
+._dFrameState-showAllActions {
+	z-index: 2;
+}
+
+/*********************************
+**      NAVIGATION DRAWER       **
+*********************************/
+#_dFrame-navigationDrawerBackground {
+	position: fixed;
+	top: 0;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+}
+
+._dFrameState-navigationExpanded #_dFrame-navigationDrawerBackground {
+	bottom: 0;
+}
+
+._dFrame-navPage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	pointer-events: none;
+	overscroll-behavior: none;
+}
+
+._dFrame-navPage._dFrame-navActive {
+	pointer-events: all;
+}
+
+._dFrame-navPage ._dFrame-navItems > li > a {
+	transform: translateX(100%);
+	transition: transform 150ms;
+}
+
+._dFrame-navPage._dFrame-navPath > ._dFrame-navItems > li > a {
+	transform: translateX(-100%);
+}
+
+._dFrame-navPage._dFrame-navActive > ._dFrame-navItems > li > a {
+	transform: translateX(0);
+}
+
+._dFrame-navPage > ._dFrame-navContent {
+	opacity: 0;
+	transition: opacity 150ms;
+	pointer-events: none;
+}
+
+._dFrame-navPage._dFrame-navActive > ._dFrame-navContent {
+	opacity: 1;
+	pointer-events: all;
+}
+
+#_dFrame-navigationDrawer > ._dFrame-navPage > ._dFrame-navItems > ._dFrame-navCrumb {
+	display: none;
+	list-style-type: none;
+}
+
+._dFrameState-hamburger #_dFrame-navigationDrawer > ._dFrame-navPage > ._dFrame-navItems > ._dFrame-navCrumb {
+	display: block;
+}
+
+@media (max-width: 767px) {
+	
+	#_dFrame-navigationDrawerContainer {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 100%;
+		overflow: hidden;
+		z-index: 9999;
+		transition: bottom 0ms;
+		transition-delay: 150ms;
+	}
+	._dFrameState-navigationExpanded #_dFrame-navigationDrawerContainer {
+		bottom: 0;
+		transition-delay: 0ms;
+	}
+	#_dFrame-navigationFrame {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 80%;
+		overflow: hidden;
+		z-index: 9999;
+		transform: translateX(-100%);
+		transition: transform 150ms;
+	}
+	._dFrame-navDrawerSpacer {
+		display: none;
+	}
+	._dFrameState-navigationExpanded #_dFrame-navigationFrame {
+		transform: translateX(0);
+	}
+
+	._dFrame-navPage {
+		overflow-y: auto;
+		overflow-x: hidden;
+		z-index: 9999;
+		pointer-events: none;
+	}
+
+	._dFrame-navPage._dFrame-navActive {
+		pointer-events: all;
+	}
+
+	._dFrame-navPage ._dFrame-navItems > li > a {
+		transform: translateX(100%);
+		transition: transform 150ms;
+	}
+
+	._dFrame-navPage._dFrame-navActive > ._dFrame-navItems > li > a {
+		transform: translateX(0);
+	}
+}
+
+@media (min-width: 768px) {
+	
+	#_dFrame-navigationDrawerContainer {
+		display: none;
+		position: relative;
+	}
+
+	#_dFrame-navigationFrame {
+		overflow: auto;
+		overscroll-behavior: none;
+	}
+
+	#_dFrame-navigationDrawer {
+		position: relative;
+		overflow: hidden;
+	}
+
+	._dFrameState-navigationExpanded #_dFrame-navigationDrawerContainer  {
+		display: block;
+	}
+
+	._dFrame-navItems {
+		overflow: hidden;
+		float: left;
+	}
+
+	#_dFrame-navigationDrawer ._dFrame-navItems {
+		width: 250px;
+	}
+
+	._dFrame-navPage ._dFrame-navItems > li > a {
+		transform: translateX(100%);
+		transition: transform 150ms;
+	}
+
+	._dFrame-navPage._dFrame-navActive > ._dFrame-navItems > li > a {
+		transform: translateX(0);
+	}
+
+	._dFrame-navDrawerSpacer {
+		transition: height 150ms;
+	}
+
+	._dFrame-navContent {
+		margin-left: 250px;
+	}
+}
+
+
+/*********************************
+** GENERAL DRAWER   **
+*********************************/
+#_dFrame-drawerBackground {
+	position: fixed;
+	top: 0;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+}
+
+._dFrameState-drawerOpened #_dFrame-drawerBackground {
+	bottom: 0;
+}
+
+@media (max-width: 767px) {
+	
+	#_dFrame-drawerContainer {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 100%;
+		overflow: hidden;
+		z-index: 9999;
+		transition: bottom 0ms;
+		transition-delay: 150ms;
+	}
+	._dFrameState-drawerOpened #_dFrame-drawerContainer {
+		bottom: 0;
+		transition-delay: 0ms;
+	}
+	#_dFrame-drawerFrame {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 80%;
+		overflow: auto;
+		z-index: 9999;
+		transform: translateX(100%);
+		transition: transform 150ms;
+		overscroll-behavior: none;
+	}
+	._dFrame-drawerSpacer {
+		display: none;
+	}
+	._dFrameState-drawerOpened #_dFrame-drawerFrame {
+		transform: translateX(0);
+	}
+}
+
+@media (min-width: 768px) {
+	#_dFrame-drawerContainer {
+		display: none;
+		position: relative;
+	}
+
+	#_dFrame-drawerFrame {
+		overscroll-behavior: none;
+		overflow: auto;
+	}
+
+	#_dFrame-drawer {
+		position: relative;
+	}
+
+	._dFrameState-drawerOpened #_dFrame-drawerContainer  {
+		display: block;
+	}
+
+}
+
+
+
