@@ -118,6 +118,21 @@ body {
   z-index: 1;
 }
 
+._nav-drawer ._nav-linkWithChildren > a:after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -6px;
+  border-width: 6px 0 6px 6px;
+  border-color: transparent #333;
+  border-style: solid;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+
 /****************************
  ** dFrame styling below   **
  ****************************/
