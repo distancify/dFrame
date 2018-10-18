@@ -89,7 +89,7 @@ function createBackLinks() {
             parentTitle = 'Start';
         } else {
             let parentLink = parent.previousElementSibling;
-            parentTitle = (<HTMLElement>parentLink).innerText;
+            parentTitle = (<HTMLElement>parentLink).textContent || "Back";
         }
 
         let links = page.querySelector('._dFrame-navItems');
