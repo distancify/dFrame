@@ -1,126 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Welcome to Efw!</title>
-    <meta name="description" content="A cool e-commerce front-end framework">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
-    <link rel="stylesheet" href="stylesheets/_dFrame.css">
-    <link rel="stylesheet" href="stylesheets/_dFrameTheme.css">
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  </head>
-  <body>
-    
-    <div id="_dFrame">
-      <header id="_dFrame-header">
+<head>
+  <title>dFrame</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/dist/_dFrame.css">
+</head>
+<body>
+  
+  <div id="_dFrame">
+    <header id="_dFrame-header" class="_header">
+      <nav id="_dFrame-ribbon" style="justify-content: center">
         
-        <div class="_dFrameTheme-headerWrap">
-          
-
-          <nav class="_dFrameTheme-ribbon" id="_dFrame-ribbon">
-            <ul class="_dFrameTheme-ribbonLeft">
-              <li>Left 1</li>
-            </ul>
-            <ul class="_dFrameTheme-ribbonRight">
-              <li>Right 1</li>
-            </ul>
-          </nav>
-
-          <div class="_dFrameTheme-headerContent" id="_dFrame-headerContent">
-
-            <div class="_dFrameTheme-pageNameWrap" id="_dFrame-pageNameWrap">
-              <a href="#pagename" class="_dFrameTheme-pageName" id="_dFrame-pageName">
-                <h1>
-                  Site Title
-                </h1>
-              </a>
-            </div>
-
-            <nav class="_dFrameTheme-navigation" id="_dFrame-navigation" data-lang-back="Tillbaka">
-              <ul class="_dFrame-navItems">
-                <li class="_dFrame-navLink _dFrameTheme-navLink _dFrameTheme-navLinkWithChildren">
-                  <a href="#link1">Link 1</a>
-                  
-                  <div class="_dFrame-navPage">
-                    <ul class="_dFrame-navItems">
-                      <li class="_dFrame-navLink _dFrameTheme-navLink"><a href="#sublink11">Sublink 1.1</a></li>
-                      <li class="_dFrame-navLink _dFrameTheme-navLink _dFrameTheme-navLinkWithChildren">
-                        <a href="#sublink12">Sublink 1.2</a>
-                        
-                        <div class="_dFrame-navPage _dFrame-navActive">
-                          <ul class="_dFrame-navItems">
-                            <li class="_dFrame-navLink _dFrameTheme-navLink"><a href="#sublink111">Sublink 1.1.1</a></li>
-                            <li class="_dFrame-navLink _dFrameTheme-navLink"><a href="#sublink112">Sublink 1.1.2</a></li>
-                            <li class="_dFrame-navLink _dFrameTheme-navLink"><a href="#sublink113">Sublink 1.1.3</a></li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="_dFrame-navLink _dFrameTheme-navLink"><a href="#sublink13">Sublink 1.3</a></li>
-                    </ul>
-                    <div class="_dFrame-navContent">
-                      Content
-                    </div>
-                  </div>
-                </li>
-                <li class="_dFrame-navLink _dFrameTheme-navLink"><a href="#link2">Link 2</a></li>
-                <li class="_dFrame-navLink _dFrameTheme-navLink _dFrameTheme-navLinkWithChildren">
-                  <a href="#link3">Link 3</a>
-
-                  <div class="_dFrame-navPage">
-                    <ul class="_dFrame-navItems">
-                      <li class="_dFrame-navLink _dFrameTheme-navLink"><a href="#sublink11">Sublink 3.1</a></li>
-                      <li class="_dFrame-navLink _dFrameTheme-navLink"><a href="#sublink12">Sublink 3.2</a></li>
-                      <li class="_dFrame-navLink _dFrameTheme-navLink"><a href="#sublink13">Sublink 3.3</a></li>
-                    </ul>
-                    <div class="_dFrame-navContent">
-                      Content
-                    </div>
-                  </div>
-                </li>
-                <li class="_dFrame-navLink _dFrameTheme-navLink"><a href="#link4">Link 4</a></li>
-              </ul>
-            </nav>
-
-
-          </div>
-          
-          
-        </div>
-      </header>
+      </nav>
       
-      <main class="_dFrameTheme-pageWrap" id="_dFrame-page">
+      <div id="_dFrame-headerContent">
         
-        Lots of content<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        Lots of content<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        Lots of content<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        Lots of content<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        Lots of content
-        
-      </main>
-      
-      <footer class="_dFrameTheme-footerWrap" id="_dFrame-footer">
-        <nav class="_dFrame-footerNavigation">
-          <h1>
-            Footer menu 1
-          </h1>
-          <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
+        <a id="_dFrame-hamburger"></a>
+        <nav id="_dFrame-navigation">
+          <ul class="_dFrame-navItems">
+            <li class="_dFrame-navLink">
+              <a href="#link1">Link1</a>
+              
+              <div class="_dFrame-navPage">
+                <ul class="_dFrame-navItems">
+                  <li class="_dFrame-navLink">
+                    <a href="#link11">Link1.1</a>
+                    
+                    <div class="_dFrame-navPage">
+                      <ul class="_dFrame-navItems">
+                        <li class="_dFrame-navLink">
+                          <a href="#link111">Link1.1.1</a>
+                        </li>
+                        <li class="_dFrame-navLink">
+                          <a href="#link112">Link1.1.2</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="_dFrame-navLink">
+                    <a href="#link12">Link1.2</a>
+                  </li>
+                </ul>
+                <div class="_dFrame-navContent">
+                  NavPageContent goes here
+                </div>
+              </div>
+            </li>
+            <li class="_dFrame-navLink">
+              <a href="#link2">Link2</a>
+            </li>
+            <li class="_dFrame-navLink">
+              <a href="#link2">Link3</a>
+            </li>
           </ul>
         </nav>
-      </footer>
-    </div>
+      </div>
+      
+      <div id="_dFrame-navigationDrawerContainer">
+        <div id="_dFrame-navigationDrawerBackground" class="_nav-drawerBackground"></div>
+        <div class="_nav-drawer" id="_dFrame-navigationFrame">
+          <div id="_dFrame-navigationDrawer"></div>
+        </div>
+      </div>
+      <div id="_dFrame-drawerContainer">
+        <div id="_dFrame-drawerBackground" class="_dFrameTheme-drawerBackground"></div>
+        <div class="_dFrameTheme-drawer" id="_dFrame-drawerFrame">
+          <div id="_dFrame-drawer"></div>
+        </div>
+      </div>
+    </header>
     
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-    <script>
-
-    </script>
-
-  </body>
+    <main>
+      Main content  
+    </main>
+    
+    <footer>
+      Footer content
+    </footer>
+  </div>
+  
+  <script src="/dist/dframe.js"></script>
+  
+</body>
 </html>
