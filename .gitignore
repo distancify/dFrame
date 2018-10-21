@@ -1,2 +1,6 @@
 /dist
 /node_modules
+.vs/dFrame/v15/.suo
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+package-lock.json
