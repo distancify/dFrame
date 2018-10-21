@@ -1,0 +1,28 @@
+/* This stylesheet is used together with minimal.css to make the header
+easier to see. It's not intended to be used as a base for a production site. */
+
+#_dFrame-ribbon {
+    height: 30px;
+    background-color: yellow;
+}
+
+#_dFrame-headerContent {
+    background-color: blue;
+}
+
+#_dFrame-navigationDrawerBackground {
+    background-color: rgba(100, 50, 50, .5);
+}
+
+._dFrameState-hamburger #_dFrame-navigationFrame, #_dFrame-navigationDrawer {
+    background-color: green;
+}
+
+._dFrameState-hamburger #_dFrame-navigationDrawer {
+    background-color: none;
+}
+
+
+._dFrame-navContent {
+    background-color: red;
+}

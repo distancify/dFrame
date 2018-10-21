@@ -303,7 +303,7 @@ body {
   top: 50%;
   margin-top: -6px;
   border-width: 6px 6px 6px 0;
-  border-color: transparent black;
+  border-color: transparent #333;
   border-style: solid;
   width: 0;
   height: 0;

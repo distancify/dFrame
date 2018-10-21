@@ -3,6 +3,10 @@
 	z-index: 5;
 }
 
+#_dFrame-ribbon, #_dFrame-headerContent {
+	z-index: 2;
+}
+
 #_dFrame-headerContent {
 	position: relative;
 	overflow: hidden;
@@ -119,6 +123,10 @@
 
 ._dFrameState-hamburger #_dFrame-navigationDrawer > ._dFrame-navPage > ._dFrame-navItems > ._dFrame-navCrumb {
 	display: block;
+}
+
+#_dFrame-navigationFrame ._dFrame-navLink > a {
+    display: block;
 }
 
 @media (max-width: 767px) {

@@ -1,0 +1,52 @@
+#_dFrame-ribbon {
+  transition: margin-top 200ms;
+}
+
+#_dFrame-headerContent {
+  background-color: #fff;
+}
+
+#_dFrame-hamburger {
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+.hamburger, .hamburger:after, .hamburger:before {
+  display: block;
+  background-color: #000;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  
+}
+.hamburger {
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -10px;
+}
+.hamburger:after {
+  content: '';
+  top: 6px;
+}
+.hamburger:before {
+  content: '';
+  top: -6px;
+}
+
+#_dFrame-navigationFrame, #_dFrame-drawerFrame {
+  background-color: #fff;
+}
+
+#_dFrame-navigationFrame ul {
+  margin: 0;
+  padding: 0;
+}
+
+#_dFrame-navigationFrame ._dFrame-navLink, #_dFrame-navigationFrame ._dFrame-navCrumb {
+  list-style-type: none;
+  display: block;
+}
+#_dFrame-navigationFrame ._dFrame-navLink a {
+  display: block;
+}
