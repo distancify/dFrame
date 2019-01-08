@@ -43,6 +43,11 @@ events.viewportScroll.push((e) => {
 
 updateScrollState();
 
+function setScrollStateAnchor()
+{
+    _scrollState.anchor = (window.pageYOffset || 0) - _headerHeight;
+}
+
 function updateSpacer() {
     _ribbonHeight = selectors.ribbon.offsetHeight || 0;
     _headerHeight = _ribbonHeight + (selectors.headerContent.offsetHeight || 0);
@@ -51,22 +56,21 @@ function updateSpacer() {
 
 function updateScrollState() {
     let current = window.pageYOffset || 0;
-    let delta = current - _scrollState.anchor;
+    let delta = current - _headerHeight - _scrollState.anchor;
 
     if (current > _ribbonHeight && delta > 50 && _scrollState.state === 'up') {
         selectors.root.classList.add('_efwState-scrolledDown');
         _scrollState.state = 'down';
-        _scrollState.anchor = window.pageYOffset || 0;
+        setScrollStateAnchor();
         selectors.ribbon.style.marginTop = '-' + selectors.ribbon.offsetHeight + 'px';
     } else if ((current < _ribbonHeight || delta < -100) && _scrollState.state === 'down') {
         selectors.root.classList.remove('_efwState-scrolledDown');
         _scrollState.state = 'up';
-        _scrollState.anchor = window.pageYOffset || 0;
+        setScrollStateAnchor();
         selectors.ribbon.style.marginTop = '';
     }
 
     if (delta > 0 && _scrollState.state === 'down' || delta < 0 && _scrollState.state === 'up') {
-        _scrollState.anchor = window.pageYOffset || 0;
+        setScrollStateAnchor();
     }
 }
-
